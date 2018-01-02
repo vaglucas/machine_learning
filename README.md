@@ -2,8 +2,8 @@
 
 linear neuron, perceptron
 
-Numpy
-scipy
-scikit-learning
-matplotlib
-pandas
+Numpy <br>
+scipy <br>
+matplotlib<br>
+scikit-learning<br>
+pandas<br>
