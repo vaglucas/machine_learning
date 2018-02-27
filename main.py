@@ -65,7 +65,7 @@ ax[0].set_ylabel('log(sum-square-error)')
 ax[0].set_title('Adaline Learning rate 0.01')
 
 ada2 = ADalineGD(n_iter=10, eta=0.0001).fit(X,y)
-ax[1].plot(1,len(ada2.cost_)+1,np.log10(ada2.cost_),marker='o')
+ax[1].plot(1,len(ada2.cost_)+1,np.log10(ada2.cost_),marker='x')
 ax[1].set_xlabel('Epochs')
 ax[1].set_ylabel('log(sum-square-error)')
 ax[1].set_title('Adaline Learning rate 0.0001')
