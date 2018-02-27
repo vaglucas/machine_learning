@@ -1,6 +1,6 @@
 import numpy as np
 
-class ADelineGD(object):
+class ADalineGD(object):
     """ADAptive LInear NEuron classifier
     Parameters
     ----------
