@@ -1,6 +1,6 @@
 import numpy as np
 
-class ADelineGD(object):
+class ADalineGD(object):
     """ADAptive LInear NEuron classifier
     Parameters
     ----------
@@ -49,13 +49,13 @@ class ADelineGD(object):
         return self
 
     def net_input(self, X):
-        """ calculate net input"""
-        return np.dot(X, self.w_[1:])+self.w_[0]
+        """Calculate net input"""
+        return np.dot(X, self.w_[1:]) + self.w_[0]
 
-    def activation(sefl, X):
-        """compute linear activation"""
+    def activation(self, X):
+        """Compute linear activation"""
         return self.net_input(X)
 
     def predict(self, X):
-        """return class label after unit setp"""
-        return np.where(self.activation(X)>=0.01,1,-1)
+        """Return class label after unit step"""
+        return np.where(self.activation(X) >= 0.0, 1, -1)
