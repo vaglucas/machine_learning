@@ -6,7 +6,7 @@ from perceptron import Perceptron
 from adaline import ADalineGD
 from adalineSGD import AdalineSGD
 from functionUtility import functionUtility as fc
-df = pd.read_csv('http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', header=None)
+df = pd.read_csv('iris.data.csv', header=None)
 print(df.tail())
 
 print("=======================DATI=========================")
@@ -58,11 +58,11 @@ print("=======================ADALINE=========================")
 
 fig, ax = plt.subplots(nrows=1,ncols=2,figsize=(8,4))
 
-ada1 = ADalineGD(n_iter=10, eta=0.01).fit(X,y)
+ada1 = ADalineGD(n_iter=15, eta=0.01).fit(X,y)
 ax[0].plot(1,len(ada1.cost_)+1,np.log10(ada1.cost_),marker='o')
 ax[0].set_xlabel('Epochs')
 ax[0].set_ylabel('log(sum-square-error)')
-ax[0].set_title('Adaline Learning rate 0.01')
+ax[0].set_title('Adaline Learning rate 0.001')
 
 ada2 = ADalineGD(n_iter=10, eta=0.0001).fit(X,y)
 ax[1].plot(1,len(ada2.cost_)+1,np.log10(ada2.cost_),marker='x')
